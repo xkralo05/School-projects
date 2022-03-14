@@ -1,0 +1,44 @@
+Projekt : TFTP klient
+Vypracoval : Kristán Královič (xkralo05)
+Dátum : 14.11.2021
+
+Popis: Program slúži na sťahovanie a nahrávanie súborov pomocou tftp protoklu.
+Program má mnoho vstupných parametrov. Povinné parametre sú -R/-W a -d. 
+Bez daných parametrov prenos súboru nezačne. Medzi ďalšie parametre patrí 
+parameter -a. Slúži na zadávanie IP adresy a portu TFTP servera. V prípade
+že parameter neni zadaný program automaticky odosiela packety na IPv4 localhost 
+a port 69. Program podporuje blocksize, timeout, transfer size rozšírenia . 
+Program nepodporuje multicast option. Program podporuje IPv4 a IPv6 adresy.
+
+Stratégia pri odmietnutí parametra -t.
+V prípade že server úplne odmietne timeout option pokračuje prenos so základným nastavením.
+V prípade že server odošle novú hodnotu timeout tak sa prenos ukončí a program sa ukončí chybou.
+
+Stratégia pri odmietnutí parametra -s.
+V prípade že server úplne odmietne blocksize option prenos pokračuje so základným nastavením.
+V prípade že server odošle novú hodnotu blocksize option tak prenos pokračuje s hodnotou ktorú odoslal server. 
+Program na to upozorní učivateľa výpisom ktorý obsahuje časové razítko a novú hodnotou blocksize option.
+
+
+Obmedzenia: Program nepodporuje multicast option. Program iba registruje zadanie parametra -m ale ďalej s ním nepracuje.
+
+Spustenie: $ ./mytftpclient  
+Po spustení programu za objaví vlastný príkazový riadok do ktorého je potrebné zadať parametre.
+Program sa ukončí zadaním "exit" na príkazový riadok. 
+
+Parametre programu: -R/-W (povinný) - Čítanie alebo zápis dát na server.
+					-d (povinný) - Súbor ktorý bude program prenášať.
+					-t (nepovinný) - Určuje hodnotu timeout ktorú program odosle na server.
+					-s (nepovinný) - Veľkosť dátového blocku pri prenose dát v nasobkoch octetu.
+					-m (nepovinný) - Multicast option - program daný parameter len registruje ale nespracuje.
+					-c (nepovinný) - Mód prenosu dát.
+					-a (nepovinný) - IP adresa a port serveru. 
+
+Preklad: $ make - preloží program 
+		 $ make run - spustí program 
+
+Zoznam súborov: mytftpclient.cpp
+				mytftpclient.hpp
+				Makefile
+				Readme
+				Manual.pdf
