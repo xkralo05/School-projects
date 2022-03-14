@@ -1,0 +1,306 @@
+#!/bin/sh
+# VUT FIT - 2020
+# IOS - projekt 1 
+# Autor : Kristian Kralovic - xkralo05
+
+export POSIXLY_CORRECT=yes 
+normalisation=false
+regex="."
+directory="."
+IFlag=false
+IFS="
+"
+succesflag="false"
+
+while getopts :i:n options;do
+	case "$options" in
+		n)	normalisation=true
+			;;
+		i)	regex=$OPTARG
+			IFlag=true
+			;;
+		:) 
+			echo "Error, bad usage of arguments !" >&2
+			echo "Example : dirgraph [-i FILE_ERE] [-n] [DIR]"
+			exit 1
+			;;	
+		*)
+			echo "Error, unknown argument  !" >&2
+			echo "Example : dirgraph [-i FILE_ERE] [-n] [DIR]"
+			exit 1
+			;;	
+		esac
+done
+shift $((OPTIND-1))
+
+FILE_ERE=$(printf "%s" "$regex" | sed -e 's/^[ \t]*//')
+if [ $# -gt 1 ]; then
+	echo "Error, too many argument!">&2
+	echo "Example : dirgraph [-i FILE_ERE] [-n] [DIR]"
+	exit 1 
+fi
+
+if [ $# -eq 0 ]; then
+	directory=$PWD
+else 
+    directory=$1
+fi	
+
+if [ ! -d "$directory" ]; then
+	echo "Directory " "$directory" " do not exist!">&2
+	exit 1
+else 
+	cd "$directory" || exit 1;
+	directory=$PWD	
+fi	
+roottest=$(basename "$directory")
+
+if [  "$IFlag" = "true" ]; then
+	if echo "FILE_ERE: $roottest , is root directory" | grep -E "$FILE_ERE" 2>/dev/null ; then
+		echo "FILE_ERE can not contain root directory">&2
+		exit 1 
+	fi	
+fi	
+
+if [ "$FILE_ERE" = "-n" ];then
+	echo "Error, bad usage of arguments !" >&2
+	exit 1
+fi
+
+ND=0
+NF=0
+if [ "$IFlag" = "false" ]; then
+	ND=$(find  -L "$directory"  -type d  2>/dev/null| wc -l)
+	ND=$(echo "$ND" | tr -d "[ :blank: ]")
+	error=$(find -L "$directory" -type d  2>&1 >/dev/null )
+	if [ $? -ne 0 ];then
+		succesflag="true"
+	fi	
+	NF=$(find -L "$directory" -type f  2>/dev/null| wc -l)
+	NF=$(echo "$NF" | tr -d "[ :blank: ]")
+	error=$(find -L "$directory" -type d  2>&1 >/dev/null )
+	if [ $? -ne 0 ];then
+		succesflag="true"
+	fi	
+else
+	error=0
+	ND=$(find -L "$directory" -type d  2>/dev/null| egrep -v -- "$FILE_ERE" 2>/dev/null| wc -l)
+	ND=$(echo "$ND" | tr -d "[ :blank: ]")
+	error=$(find -L "$directory" -type d  2>&1 >/dev/null )
+	if [ $? -ne 0 ];then
+		succesflag="true"
+	fi	
+	NF=$(find -L "$directory" -type f  2>/dev/null| egrep -v -- "$FILE_ERE" 2>/dev/null| wc -l)
+	NF=$(echo "$NF" | tr -d "[ :blank: ]")
+	error=$(find -L "$directory" -type d  2>&1 >/dev/null )
+	
+	if [ $? -ne 0 ];then
+		succesflag="true"
+	fi	
+fi	
+
+if [ "$ND" -eq 0 ];then
+	echo "Error, bad usage of arguments !" >&2
+	echo "FILE_ERE can not contain root directory">&2
+	exit 1
+fi
+
+if [ "$IFlag" = "false" ];then
+	nol100B=$(find -L "$directory" -type f 2>/dev/null -size -100c  | wc -l )
+	nol1kib=$(find -L "$directory" -type f 2>/dev/null -size +99c -size -1024c | wc -l)
+	nol10kib=$(find -L "$directory" -type f 2>/dev/null -size +1023c -size -10240c | wc -l)
+	nol100kib=$(find -L "$directory" -type f 2>/dev/null -size +10239c -size -102400c | wc -l)
+	nol1mib=$(find -L "$directory" -type f 2>/dev/null -size +102399c -size -1048576c | wc -l)
+	nol10mib=$(find -L "$directory" -type f 2>/dev/null -size +1048575c -size -10485760c | wc -l)
+	nol100mib=$(find -L "$directory" -type f 2>/dev/null -size +10485759c -a -size -104857600c  | wc -l)
+	nol1gib=$(find -L "$directory" -type f 2>/dev/null -size +104857599c -a -size -1073741824c  | wc -l)
+	nog1gib=$(find -L "$directory" -type f 2>/dev/null -size +1073741823c  | wc -l)
+fi
+
+if [ "$IFlag" = "true" ];then
+	nol100B=$(find -L "$directory" -type f  2>/dev/null -size -100c  | egrep -v -- "$FILE_ERE" 2>/dev/null| wc -l)
+	nol1kib=$(find -L "$directory" -type f   2>/dev/null -size +99c -size -1024c | egrep -v -- "$FILE_ERE" 2>/dev/null | wc -l)
+	nol10kib=$(find -L "$directory" -type f  2>/dev/null -size +1023c -size -10240c | egrep -v -- "$FILE_ERE" 2>/dev/null | wc -l)
+	nol100kib=$(find -L "$directory" -type f 2>/dev/null -size +10239c -size -102400c | egrep -v -- "$FILE_ERE" 2>/dev/null | wc -l)
+	nol1mib=$(find -L "$directory" -type f 2>/dev/null -size +102399c -size -1048576c | egrep -v -- "$FILE_ERE" 2>/dev/null| wc -l)
+	nol10mib=$(find -L "$directory" -type f  2>/dev/null -size +1048575c -size -10485760c | egrep -v  -- "$FILE_ERE" 2>/dev/null | wc -l)
+	nol100mib=$(find -L "$directory" -type f 2>/dev/null -size +10485759c -size -104857600c | grep -v -- "$FILE_ERE" 2>/dev/null| wc -l)
+	nol1gib=$(find -L "$directory" -type f 2>/dev/null -size +104857599c -size -1073741824c | grep -v -- "$FILE_ERE" 2>/dev/null| wc -l)
+	nog1gib=$(find -L "$directory" -type f 2>/dev/null -size +1073741823c | egrep -v -- "$FILE_ERE" 2>/dev/null| wc -l)	
+fi
+printhas()
+{
+	tcols=0
+	maxcols=0
+	noh=$1	
+	if [ -t 1 ];then
+		tcols=$(tput cols)
+		maxcols=`expr $tcols - 13`	
+		hmaxcols=$maxcols
+	else 
+		maxcols=67	
+		hmaxcols=$maxcols
+	fi
+	
+	while [ "$noh" -gt 0 ]
+	do
+		if [ "$maxcols" -gt 0 ]; then
+			noh=$((noh -1))
+			maxcols=$((maxcols -1))
+			printf "#"
+		else
+			printf "\n"
+			maxcols=$hmaxcols
+		fi	
+	done
+	printf "\n"	
+}
+
+if [ "$normalisation" = "false" ]; then
+	echo "Root directory: $PWD"
+	echo "Directories: $ND"
+	echo "All files: $NF"
+	echo "File size histogram:"
+	printf "  <100B   : "
+	printhas $nol100B
+	printf "  <1 KiB  : "
+	printhas $nol1kib
+	printf "  <10 KiB : "
+	printhas $nol10kib
+	printf "  <100 KiB: "
+	printhas $nol100kib
+	printf "  <1 MiB  : "
+	printhas $nol1mib
+	printf "  <10 MiB : "
+	printhas $nol10mib
+	printf "  <100 MiB: "
+	printhas $nol100mib
+	printf "  <1 GiB  : "
+	printhas $nol1gib
+	printf "  >=1 GiB : " 
+	printhas $nog1gib
+fi	
+
+if [ "$normalisation" = "true" ]; then
+	
+	max=$nol100B;
+
+	if [ "$nol1kib" -gt "$max" ]; then
+		max=$nol1kib
+	fi
+	if [ "$nol10kib" -gt "$max" ]; then
+		max=$nol10kib
+	fi
+	if [ "$nol100kib" -gt "$max" ]; then
+		max=$nol100kib
+	fi
+	if [ "$nol1mib" -gt "$max" ]; then
+		max=$nol1mib
+	fi
+	if [ "$nol10mib" -gt "$max" ]; then
+		max=$nol10mib
+	fi
+	if [ "$nol100mib" -gt "$max" ]; then
+		max=$nol100mib
+	fi
+	if [ "$nol1gib" -gt "$max" ]; then
+		max=$nol1gib
+	fi
+
+	if [ "$nog1gib" -gt "$max" ]; then
+		max=$nog1gib
+	fi
+    
+    cols=0
+    ncols=67
+    indicator="false"
+   
+    if [ -t 1 ]; then
+    	tercols=$(tput cols)
+    	cols=`expr $tercols - 13`
+    	if [ "$max" -gt "$cols" ]; then
+    		indicator="true"
+    	fi
+    else
+    	if [ "$max" -gt "$ncols" ]; then
+    		indicator="true";
+		fi		
+	fi		
+	
+	if [ "$indicator" = "true" ]; then
+		if [ "$nol100B" -gt 0 ];then
+			nol100B=$((nol100B*cols/max))
+		fi
+		if [ "$nol1kib" -gt 0 ];then
+			nol1kib=$((nol1kib*cols/max))	
+		fi
+		if [ "$nol10kib" -gt 0 ];then
+			nol10kib=$((nol10kib*cols/max))	
+		fi
+		if [ "$nol100kib " -gt 0 ];then
+			nol100kib=$((nol100kib*cols/max))	
+		fi	
+		if [ "$nol1mib" -gt 0 ];then
+			nol1mib=$((nol1mib *cols/max))
+		fi
+		if [ "$nol10mib" -gt 0 ];then
+			nol10mib=$((nol10mib *cols/max))
+		fi	
+		if [ "$nol100mib" -gt 0 ];then
+			nol100mib=$((nol100mib *cols/max))
+		fi
+		if [ "$nol1gib" -gt 0 ];then
+			nol1gib=$((nol1gib *cols/max))	
+		fi
+		if [ "$nog1gib  " -gt 0 ];then
+			nog1gib=$((nog1gib *cols/max))
+		fi
+	fi	
+	
+	echo "Root directory: $PWD"
+	echo "Directories: $ND"
+	echo "All files: $NF"
+	echo "File size histogram:"
+	printf "  <100B   : "
+	printhas $nol100B
+	printf "  <1 KiB  : "
+	printhas $nol1kib
+	printf "  <10 KiB : "
+	printhas $nol10kib
+	printf "  <100 KiB: "
+	printhas $nol100kib
+	printf "  <1 MiB  : "
+	printhas $nol1mib
+	printf "  <10 MiB : "
+	printhas $nol10mib
+	printf "  <100 MiB: "
+	printhas $nol100mib
+	printf "  <1 GiB  : "
+	printhas $nol1gib
+	printf "  >=1 GiB : " 
+	printhas $nog1gib
+fi
+
+if [ "$succesflag" = "false" ];then
+	exit 0
+else
+    exit 1
+fi 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
