@@ -1,0 +1,4 @@
+xkralo05 100 (Plán, testy matematickej knižnice, matematická knižnica, inštalátor)
+xvalko11 100 (GUI, linkovanie mat knižnice a GUI, poradie operatorov, makefile)
+xprecn00 100 (Dokumentacia, uživatelská príručka)
+xponek00 100 (Správa repozitára, GUI, Profiling)

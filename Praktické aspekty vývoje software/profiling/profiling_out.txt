@@ -1,0 +1,607 @@
+Wed Apr 22 15:20:08 2020    profile_10.pstats
+
+         660 function calls (653 primitive calls) in 0.001 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000    0.001    0.001 {built-in method builtins.exec}
+        1    0.000    0.000    0.001    0.001 profiling.py:2(<module>)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:966(_find_and_load)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:651(_load_unlocked)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:672(exec_module)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:743(get_code)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
+      4/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 profiling.py:5(odchylka)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+        2    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+       11    0.000    0.000    0.000    0.000 {built-in method builtins.input}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+        1    0.000    0.000    0.000    0.000 profiling.py:25(suma_2)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__enter__)
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
+        8    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+       37    0.000    0.000    0.000    0.000 {built-in method builtins.round}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
+       11    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:123(umocnovanie)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(create_module)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:403(cached)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
+       20    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:22(plus)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:77(delenie)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1228(_get_spec)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
+        1    0.000    0.000    0.000    0.000 profiling.py:19(suma_of)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:318(__exit__)
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:147(odmocnina)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
+       16    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+       81    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+       27    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:433(spec_from_loader)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:78(acquire)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:318(decode)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+       25    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:103(release)
+       48    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
+       13    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+       18    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 profiling.py:31(str_to_int)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:369(__init__)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
+        3    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        1    0.000    0.000    0.000    0.000 profiling.py:32(<listcomp>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+       10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        3    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:58(nasobenie)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:321(<genexpr>)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
+        4    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:12(Library)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:27(Profile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:40(minus)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:330(getstate)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:753(is_package)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        2    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
+
+##############################################################################################################
+
+Wed Apr 22 15:19:09 2020    profile_100.pstats
+
+         1917 function calls (1910 primitive calls) in 0.002 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000    0.002    0.002 {built-in method builtins.exec}
+        1    0.000    0.000    0.002    0.002 profiling.py:2(<module>)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:966(_find_and_load)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+        1    0.000    0.000    0.001    0.001 profiling.py:5(odchylka)
+      3/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:651(_load_unlocked)
+        1    0.000    0.000    0.000    0.000 profiling.py:25(suma_2)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:672(exec_module)
+      200    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:22(plus)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+      307    0.000    0.000    0.000    0.000 {built-in method builtins.round}
+      101    0.000    0.000    0.000    0.000 {built-in method builtins.input}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:743(get_code)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
+      101    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:123(umocnovanie)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
+        1    0.000    0.000    0.000    0.000 profiling.py:19(suma_of)
+      4/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:5(<module>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
+      621    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+        2    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__enter__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+        8    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:403(cached)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(create_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
+        1    0.000    0.000    0.000    0.000 profiling.py:31(str_to_int)
+        1    0.000    0.000    0.000    0.000 profiling.py:32(<listcomp>)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1228(_get_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:318(__exit__)
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:77(delenie)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:147(odmocnina)
+      100    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:78(acquire)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
+       16    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:103(release)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:433(spec_from_loader)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+       13    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+       27    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:318(decode)
+        3    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
+       25    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+       48    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+       18    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
+        3    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:58(nasobenie)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:321(<genexpr>)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:369(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
+        4    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        6    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:40(minus)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:12(Library)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:27(Profile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:330(getstate)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:753(is_package)
+
+###############################################################################################################
+
+Wed Apr 22 15:19:02 2020    profile_1000.pstats
+
+         14517 function calls (14510 primitive calls) in 0.008 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000    0.008    0.008 {built-in method builtins.exec}
+        1    0.000    0.000    0.008    0.008 profiling.py:2(<module>)
+        1    0.000    0.000    0.005    0.005 profiling.py:5(odchylka)
+        1    0.000    0.000    0.003    0.003 profiling.py:25(suma_2)
+     2000    0.001    0.000    0.003    0.000 /home/timotej/src/mat_kniznica.py:22(plus)
+     3007    0.002    0.000    0.002    0.000 {built-in method builtins.round}
+     1001    0.002    0.000    0.002    0.000 {built-in method builtins.input}
+     1001    0.001    0.000    0.002    0.000 /home/timotej/src/mat_kniznica.py:123(umocnovanie)
+        1    0.000    0.000    0.002    0.002 profiling.py:19(suma_of)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:966(_find_and_load)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+     6021    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+      3/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:651(_load_unlocked)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:672(exec_module)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:743(get_code)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
+        1    0.000    0.000    0.000    0.000 profiling.py:31(str_to_int)
+        1    0.000    0.000    0.000    0.000 profiling.py:32(<listcomp>)
+      4/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:5(<module>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+     1000    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+        2    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+        8    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__enter__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(create_module)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:403(cached)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:5(<module>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+       27    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:77(delenie)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1228(_get_spec)
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:147(odmocnina)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:318(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:318(decode)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:40(minus)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:78(acquire)
+        3    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:433(spec_from_loader)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+       18    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+       16    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:58(nasobenie)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:103(release)
+       48    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
+       25    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+       13    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:369(__init__)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
+        3    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:330(getstate)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
+        4    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        2    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:12(Library)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:321(<genexpr>)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:27(Profile)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:753(is_package)
+
+#############################################################################################################
+
+Wed Apr 22 15:18:51 2020    profile_1000_2.pstats
+
+         14517 function calls (14510 primitive calls) in 0.008 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000    0.008    0.008 {built-in method builtins.exec}
+        1    0.000    0.000    0.008    0.008 profiling.py:2(<module>)
+        1    0.000    0.000    0.005    0.005 profiling.py:5(odchylka)
+        1    0.000    0.000    0.003    0.003 profiling.py:25(suma_2)
+     2000    0.001    0.000    0.003    0.000 /home/timotej/src/mat_kniznica.py:22(plus)
+     3007    0.002    0.000    0.002    0.000 {built-in method builtins.round}
+     1001    0.001    0.000    0.002    0.000 /home/timotej/src/mat_kniznica.py:123(umocnovanie)
+        1    0.000    0.000    0.002    0.002 profiling.py:19(suma_of)
+     1001    0.001    0.000    0.001    0.000 {built-in method builtins.input}
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:966(_find_and_load)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+     6021    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+      3/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:651(_load_unlocked)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:672(exec_module)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:743(get_code)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
+        1    0.000    0.000    0.000    0.000 profiling.py:31(str_to_int)
+        1    0.000    0.000    0.000    0.000 profiling.py:32(<listcomp>)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
+      4/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:5(<module>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+        2    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+     1000    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        8    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__enter__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:403(cached)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(create_module)
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+       27    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:77(delenie)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:147(odmocnina)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1228(_get_spec)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:318(__exit__)
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+       48    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
+       16    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+       13    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:318(decode)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:78(acquire)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+       25    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:58(nasobenie)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:433(spec_from_loader)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:103(release)
+        3    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
+       18    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:369(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        4    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:40(minus)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        3    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:330(getstate)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:12(Library)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:27(Profile)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:321(<genexpr>)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:753(is_package)
+        6    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)
+
+############################################################################################################
+
+Wed Apr 22 16:22:31 2020    profile_1000_3.pstats
+
+         14520 function calls (14513 primitive calls) in 0.011 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000    0.011    0.011 {built-in method builtins.exec}
+        1    0.000    0.000    0.011    0.011 profiling.py:2(<module>)
+        1    0.000    0.000    0.008    0.008 profiling.py:5(odchylka)
+        1    0.001    0.001    0.006    0.006 profiling.py:25(suma_2)
+     2000    0.001    0.000    0.004    0.000 /home/timotej/src/mat_kniznica.py:22(plus)
+     3007    0.004    0.000    0.004    0.000 {built-in method builtins.round}
+     1001    0.001    0.000    0.003    0.000 /home/timotej/src/mat_kniznica.py:123(umocnovanie)
+        1    0.000    0.000    0.002    0.002 profiling.py:19(suma_of)
+     1001    0.002    0.000    0.002    0.000 {built-in method builtins.input}
+     6021    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:966(_find_and_load)
+      3/2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+      3/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:651(_load_unlocked)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:672(exec_module)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+        1    0.000    0.000    0.000    0.000 profiling.py:31(str_to_int)
+        1    0.000    0.000    0.000    0.000 profiling.py:32(<listcomp>)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:743(get_code)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
+      4/2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:5(<module>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+     1000    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+        2    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__enter__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
+        8    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:403(cached)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(create_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:5(<module>)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:77(delenie)
+       22    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+       27    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:147(odmocnina)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1228(_get_spec)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:318(__exit__)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:318(decode)
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+       48    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:78(acquire)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:433(spec_from_loader)
+        3    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+       13    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:103(release)
+       16    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+        2    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:58(nasobenie)
+       25    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+        3    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
+       18    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
+        4    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:321(<genexpr>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:369(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
+        6    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+        3    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:40(minus)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /home/timotej/src/mat_kniznica.py:12(Library)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.6/cProfile.py:27(Profile)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.6/codecs.py:330(getstate)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+       13    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:753(is_package)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)

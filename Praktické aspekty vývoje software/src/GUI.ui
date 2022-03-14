@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calculator</class>
+ <widget class="QMainWindow" name="Calculator">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>408</width>
+    <height>719</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>408</width>
+    <height>718</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::CustomContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>SnakeJazzCalculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="app.qrc">
+    <normaloff>:/icons/icon_result.png</normaloff>:/icons/icon_result.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(71, 68, 60);
+alternate-background-color: rgb(46, 52, 54);
+border-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+</string>
+  </property>
+  <property name="locale">
+   <locale language="Czech" country="CzechRepublic"/>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="locale">
+    <locale language="Czech" country="CzechRepublic"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="5" column="2">
+     <widget class="QPushButton" name="Button_3">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_3.png</normaloff>:/icons/icon_num_3.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QPushButton" name="Button_result">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_result.png</normaloff>:/icons/icon_result.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="Button_delete">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_delete.png</normaloff>:/icons/icon_delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="Button_comma">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_comma.png</normaloff>:/icons/icon_comma.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="Button_clear_all">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_clear_all.png</normaloff>:/icons/icon_clear_all.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="Button_square_root">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_square_root.png</normaloff>:/icons/icon_square_root.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="Button_8">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_8.png</normaloff>:/icons/icon_num_8.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="Button_6">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_6.png</normaloff>:/icons/icon_num_6.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="Button_1">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_1.png</normaloff>:/icons/icon_num_1.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="Button_ln">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_log.png</normaloff>:/icons/icon_log.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="Button_pow">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_pow.png</normaloff>:/icons/icon_pow.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="Button_2">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_2.png</normaloff>:/icons/icon_num_2.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="Button_mul">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_mul.png</normaloff>:/icons/icon_mul.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="Button_sub">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_sub.png</normaloff>:/icons/icon_sub.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="Button_7">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_7.png</normaloff>:/icons/icon_num_7.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="Button_5">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_5.png</normaloff>:/icons/icon_num_5.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="Button_0">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_0.png</normaloff>:/icons/icon_num_0.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="Button_factorial">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_factorial.png</normaloff>:/icons/icon_factorial.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="4">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>90</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>2</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Uroob</family>
+        <pointsize>50</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <strikeout>false</strikeout>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">  QLineEdit {
+      border: 2px solid gray;
+      border-radius: 10px;
+      padding: 0 8px;
+      background: rgb(17, 7, 1);
+      selection-background-color: darkgray;
+  }</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>25</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="cursorPosition">
+       <number>0</number>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="Button_div">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_div.png</normaloff>:/icons/icon_div.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="Button_4">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_4.png</normaloff>:/icons/icon_num_4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="Button_add">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_add.png</normaloff>:/icons/icon_add.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_other</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="Button_9">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid rgb(46, 52, 54);
+      border-radius: 6px;     
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.990925, y2:0, stop:0 rgba(0, 0, 0, 255));
+  }
+
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.579, y1:0.38561, x2:0.019, y2:0.963, stop:0.263682 rgba(0, 0, 0, 255), stop:0.698565 rgba(50, 50, 50, 255), stop:0.855721 rgba(81, 83, 79, 255))
+  }</string>
+      </property>
+      <property name="locale">
+       <locale language="Czech" country="CzechRepublic"/>
+      </property>
+      <property name="text">
+       <string notr="true"/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/icon_num_9.png</normaloff>:/icons/icon_num_9.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_numbers</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="1" column="2" colspan="2">
+     <widget class="QPushButton" name="Button_help">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton {
+      border: 2px solid black;
+      border-radius: 6px; 
+		background-color: rgb(0, 0, 0);
+  }
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="app.qrc">
+        <normaloff>:/icons/napoveda.png</normaloff>:/icons/napoveda.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>225</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>408</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="locale">
+    <locale language="Czech" country="CzechRepublic"/>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="9"/>
+ <tabstops>
+  <tabstop>Button_1</tabstop>
+  <tabstop>Button_2</tabstop>
+  <tabstop>Button_3</tabstop>
+  <tabstop>Button_4</tabstop>
+  <tabstop>Button_5</tabstop>
+  <tabstop>Button_6</tabstop>
+  <tabstop>Button_7</tabstop>
+  <tabstop>Button_8</tabstop>
+  <tabstop>Button_9</tabstop>
+  <tabstop>Button_0</tabstop>
+  <tabstop>Button_comma</tabstop>
+  <tabstop>Button_div</tabstop>
+  <tabstop>Button_mul</tabstop>
+  <tabstop>Button_sub</tabstop>
+  <tabstop>Button_add</tabstop>
+  <tabstop>Button_result</tabstop>
+  <tabstop>Button_factorial</tabstop>
+  <tabstop>Button_square_root</tabstop>
+  <tabstop>Button_pow</tabstop>
+  <tabstop>Button_ln</tabstop>
+  <tabstop>Button_clear_all</tabstop>
+  <tabstop>Button_delete</tabstop>
+ </tabstops>
+ <resources>
+  <include location="app.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <buttongroups>
+  <buttongroup name="buttonGroup_numbers"/>
+  <buttongroup name="buttonGroup_other"/>
+ </buttongroups>
+</ui>

@@ -1,0 +1,37 @@
+Plán k druhému projektu k predmetu IVS -- Kalkulačka 
+
+Vývojové prostredie : Ubuntu 18.04
+Jazyk dokumentácie : Slovenčina 
+Programovací jazyk : Python 
+
+Termíny :
+
+15.3 - Vytvorenie plánu (xkralo05)
+15.3 - Inicializácia projektu , vytvorenie repozitára (xponek00)
+22.3 - Testy matematickej knižnice (xkralo05)
+3.4  - Matematická knižnica (xkralo05,xvalko11)
+6.4  - GUI (xponek00)
+10.4 - Linkovanie gui a knižnice (xponek00)
+14.4 - Profiling (xprecn00)
+16.4 - Makefile (xvalko11)
+19.4 - Riešenie vzniknutých  problémov 
+19.4 - Dokumentácia v doxygen (xprecn00)
+20.4 - Inštalátor (xkralo05,xponek00)
+20.4 - Manuál (xprecn00)
+20.4 - Mockup (xvalko11)
+22.4 - skutecnost.txt , hodnoceni.txt , snímky debuggeru .
+23.4 - 7:00 Odovzdávanie projektu !
+9.5  - 7:00 Odovzdávanie súboru xloginNN_problémy.txt 
+
+
+Komunikácia :
+
+Komunikácia bude prebiehať v privátnej skupine na aplikácii discord.
+Chat bude kontrolovaný minmálne 2 krát denne.
+
+Systém pre správu verzií :
+
+Pre projekt bol vytvorený repozitár na github : https://github.com/st22nestrel/xponek00_xprecn00_xkralo05_xvalko11
+Bol pridaný aj účet pre kontrolu .
+
+

@@ -1,0 +1,18 @@
+﻿Python - xponek00, xprecn00, xvalko11, xkralo05 
+
+Rozdiely medzi plánom a skutočnosťou.
+
+1. Rozdelenie práce nebolo dodržané. Došlo k miernému prerozdeleniu práce ktoré bolo spôsobené hlavne
+rozdielnou úrovňou vedomostí v určitých podčastiach procesu tvorby programu. Najväčšou zmenou oproti
+pôvodnému plánu bolo prevzatie tvorby profilingu : xprecn00 -> xponek00
+
+2. Neplnenie deadline. Počas práce na projekte sa niektoré deadline vôbec nedodržali. Problém nastal
+hlavne pri záverečných prácach na projekte(makefile sa robil posledný deň, inštalátor bol vytvorený 6 
+dní po deadline). Táto situácia bola čiastočne spôsobená posunom deadline odovzdávania projektu a 
+časovou náročnosťou práce na projektoch z iných predmetov. 
+
+3. Nepodarilo sa nám úplne dodržať princíp TDD. V testoch museli byť upravené niektoré veci kvôli
+rozdielnej implementácií oproti plánu. 
+
+4. V koncovej fáze projektu zlyhala komunikácia keďže jednému členovi tímu sa po update windowsu rozbil
+discord a nebol schopný to opraviť. Komunikácia potom prebiehala cez "prostredníka" čo nebolo ideálne. 
