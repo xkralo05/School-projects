@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Moje vstupenky{% endblock %}
+
+{% block content %}
+<h2>Zoznam zakúpených vstupeniek :</h2>
+
+{%for ticket in tickets%}
+<div style="cursor: pointer;">
+    {%for conference in conferences %}
+    {% if ticket['conference_fk']==conference['id_conference'] %}
+    <h1>Konferencia {{conference['name']}}</h1>
+    {% endif %}
+    {%endfor%}
+    <p>Meno : {{ticket['name']}}</p>
+    <p>Priezvisko : {{ticket['surname']}}</p>
+    {% if ticket['status']=="waiting_for_confirmation" %}
+    <p>Stav objednávky : Čaká na potvrdenie správcom konferencie</p>
+    {% else %}
+    <p>Stav objednávky : Potvrdená</p>
+    {% endif %}
+</div>
+{%endfor%}
+
+{% endblock %}

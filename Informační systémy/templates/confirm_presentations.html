@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Zoznam prezentácií čakajúcich na potvrdenie :</h2>
+<input type="button" value="Späť na konferenciu"
+    onclick="window.location.href='{{ url_for('conference', id_conference=id_conference )}}';">
+<input type="button" value="Potvrdiť všetky"
+    onclick="window.location.href='{{ url_for('confirm_presentations', id_conference=id_conference , id_presentation='all') }}';">
+{%for presentation in presentations%}
+{% if presentation['status']=="waiting_for_confirmation" %}
+<div>
+    <p>Meno : {{presentation['name']}}</p>
+    <p>Bližšie informácie : {{presentation['info']}}</p>
+    <p>Prednášajúci : {{presentation['lecturer']}}</p>
+    <p>Stav: Čaká na potvrdenie správcom konferencie</p>
+    <input type="button" value="Potvrdiť"
+        onclick="window.location.href='{{ url_for('confirm_presentations', id_conference=id_conference , id_presentation=presentation['id_prezentation'])}}';">
+</div>
+{% else %}
+<div>
+    <p>Meno : {{presentation['name']}}</p>
+    <p>Bližšie informácie : {{presentation['info']}}</p>
+    <p>Prednášajúci : {{presentation['lecturer']}}</p>
+    <p>Stav objednávky : Potvrdená</p>
+</div>
+{% endif %}
+{%endfor%}
+
+{% endblock %}

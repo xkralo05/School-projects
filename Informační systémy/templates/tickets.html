@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Zoznam vstupeniek na konferenciu čakajúcich na potvrdenie :</h2>
+<input type="button" value="Späť na konferenciu"
+    onclick="window.location.href='{{ url_for('conference', id_conference=id_conference )}}';">
+<input type="button" value="Potvrdiť všetky"
+    onclick="window.location.href='{{ url_for('tickets', id_conference=id_conference , id_ticket='all') }}';">
+{%for ticket in tickets%}
+{% if ticket['status']=="waiting_for_confirmation" %}
+<div>
+    <p>Meno : {{ticket['name']}}</p>
+    <p>Priezvisko : {{ticket['surname']}}</p>
+    <p>Stav objednávky : Čaká na potvrdenie správcom konferencie</p>
+    <input type="button" value="Potvrdiť"
+        onclick="window.location.href='{{ url_for('tickets', id_conference=id_conference , id_ticket=ticket['id_ticket'])}}';">
+</div>
+{% else %}
+<div>
+    <p>Meno : {{ticket['name']}}</p>
+    <p>Priezvisko : {{ticket['surname']}}</p>
+    <p>Stav objednávky : Potvrdená</p>
+</div>
+{% endif %}
+{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<input type="button" value="Späť na konferenciu"
+	onclick="window.location.href='{{ url_for('conference', id_conference=id_conference )}}';">
+<p>Pre tvorbu rozvrhu je nutné mať vytvorené miestnosti a prezentácie</b><br>
+<p>Začiatok konferencie : <b>{{conference_start}}</b><br>
+	Koniec konferencie : <b>{{conference_end}}</b></p>
+<h1 style="color:red"> {{ msg }} </h1>
+{%for presentation in presentations%}
+<div>
+	{% if presentation['room_fk'] is none %}
+	<h1 style="color:red"><b>Prezentácii ešte nebola pridelená miestnosť</b></h1>
+	{% endif %}
+	<h1>Prezentácia : <b>{{presentation['name']}}</b></h1>
+	<form
+		action="{{ url_for('create_timeshedule',id_conference=id_conference,id_presentation=presentation['id_prezentation'])}}"
+		method="POST">
+		<table>
+			<tr>
+				<td><label for="date_of_start">Dátum a čas začiatku</label></td>
+				<td><input type="datetime-local" id="date_of_start" name="date_of_start"
+						value="{{presentation['date_of_start']}}" min="2021-11-18T00:00" max="2050-11-19T00:00"
+						required></td>
+
+			</tr>
+			<tr>
+				<td><label for="date_of_end">Dátum a čas konca</label></td>
+				<td><input type="datetime-local" id="date_of_end" name="date_of_end"
+						value="{{presentation['date_of_end']}}" min="2021-11-18T00:00" max="2050-11-19T00:00" required>
+				</td>
+
+			</tr>
+			<tr>
+				<td><label for="rooms">Miestnosť</label></td>
+				<td><select name="rooms" id="rooms">
+						{% for room in conf_rooms%}
+						<option value="{{room['name']}}">{{room['name']}}</option>
+						{%endfor%}
+
+					</select></td>
+		</table>
+		</tr>
+		<input type="submit" value="Pridať">
+	</form>
+</div>
+{%endfor%}
+<h2>Rozvrh :</h2>
+{% for room in conf_rooms%}
+<br>
+<table>
+	<tr>
+		<td>Miestnosť :</td>
+		<td><b>{{room['name']}}</b></td>
+		<td>&nbsp &nbsp &nbsp &nbsp OD</td>
+		<td>&nbsp &nbsp &nbsp &nbsp DO</td>
+	</tr>
+	{% for presentation in presentations%}
+	{% if presentation['room_fk'] == room['id_room'] %}
+	<tr>
+		<td>&nbsp &nbsp &nbsp &nbsp Prezentácia:</td>
+		<td><b>{{presentation['name']}}</b></td>
+		<td>&nbsp &nbsp &nbsp &nbsp{{presentation['date_of_start']}}</td>
+		<td>&nbsp &nbsp &nbsp &nbsp{{presentation['date_of_end']}}</td>
+	</tr>
+	{% endif %}
+	{%endfor%}
+</table>
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,211 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% if edit == 'True' %}
+<h2>{{conference['name']}}</h2>
+<div>
+    <form action="{{ url_for('edit_conference',edit='False',id_conference=conference['id_conference']) }}" method="post"
+        autocomplete="off">
+        <p>Podrobnosti konferencie :</p>
+        <table>
+            <tr>
+                <td><label for="namel">Názov konferencie</label></td>
+                <td><input type="text" name="name" value={{conference['name']}} id="name" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="field_of_interest">Oblasť záujmu</label></td>
+                <td><input type="text" name="field_of_interest" value={{conference['field_of_interest']}}
+                        id="field_of_interest" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="place">Miesto konania</label></td>
+                <td><input type="text" name="place" value={{conference['place']}} id="place" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="price">Cena</label></td>
+                <td><input type="number" name="price" value={{conference['price']}} id="price"><br></td>
+            </tr>
+            <tr>
+                <td><label for="date_of_start">Dátum začiatku</label></td>
+                <td><input type="datetime-local" id="date_of_start" name="date_of_start" value="2021-11-18T00:00"
+                        min="2021-11-18T00:00" max="2050-11-19T00:00" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="date_of_end">Dátum konca</label></td>
+                <td><input type="datetime-local" id="date_of_end" name="date_of_end" value="2021-11-18T00:00"
+                        min="2021-11-18T00:00" max="2050-11-19T00:00" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="capacity">Kapacita</label></td>
+                <td><input type="number" name="capacity" min="1" value={{conference['capacity']}} id="capacity"><br>
+                </td>
+            </tr>
+
+            <div class="msg">{{ msg }}</div>
+        </table>
+        <input type="submit" value="Zmeniť konferenciu">
+    </form>
+</div>
+
+{% else %}
+<h1>{{ conference['name'] }}!</h1>
+<div>
+    <table>
+        <tr>
+            <td>
+                Oblasť záujmu :
+            </td>
+            <td>
+                {{conference['field_of_interest']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Miesto konania :
+            </td>
+            <td>
+                {{conference['place']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dátum a čas začiatku :
+            </td>
+            <td>
+                {{conference['date_of_start']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dátum a čas konca :
+            </td>
+            <td>
+                {{conference['date_of_end']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kapacita :
+            </td>
+            <td>
+                {{noft['num_of_tickets']}}/{{conference['capacity']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Cena :
+            </td>
+            <td>
+                {{conference['price']}} €
+            </td>
+        </tr>
+    </table>
+</div>
+{% if conference['user_fk'] == session['id'] %}
+<div class="quantity buttons_added">
+    <p>Vystaviť vstupenky zaplatené v hotovosti</p>
+    <form action="{{ url_for('buy_ticket',id_conference=conference['id_conference'],) }}" method="post" id="buyform">
+        <input type="button" value="-" class="minus">
+        <input type="number" step="1" min="1" max="20" name="quantity" id="quantity" value="1"
+            class="input-text qty text" size="4" pattern="" inputmode="">
+        <input type="button" value="+" name="plus" class="plus">
+        <button type="submit" form="buyform" id="shopping-button"><i class="fas fa-shopping-cart"></i></button>
+    </form>
+</div>
+<div class="confbtn">
+    <input type="button" value="Spravovať konferenciu"
+        onclick="window.location.href='{{url_for('edit_conference',id_conference=conference['id_conference'], edit='True')}}';">
+    <input type="button" value="Spravovať vstupenky"
+        onclick="window.location.href='{{url_for('tickets',id_conference=conference['id_conference'],id_ticket='show')}}';">
+    <input type="button" value="Schváliť prezentácie"
+        onclick="window.location.href='{{url_for('confirm_presentations',id_conference=conference['id_conference'],id_presentation='show')}}';">
+    <input type="button" value="Prezentovať na konferencií"
+        onclick="window.location.href='{{url_for('create_presentation',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Vytvoriť miestnosť"
+        onclick="window.location.href='{{url_for('create_room',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Spravovať miestnosti"
+        onclick="window.location.href='{{url_for('edit_or_delete_room',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Vytvoriť časový rozpis"
+        onclick="window.location.href='{{url_for('create_timeshedule',id_conference=conference['id_conference'],id_presentation='-1')}}';">
+    <input type="button" value="Zobraziť časový rozpis"
+        onclick="window.location.href='{{url_for('show_timeshedule',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Zobraziť zoznam miestností"
+        onclick="window.location.href='{{url_for('show_rooms',id_conference=conference['id_conference'])}}';">
+</div>
+
+
+
+
+{% elif 'logged_in' in session %}
+
+<div class="quantity buttons_added">
+    <p>Cena vstupenky : {{conference['price']}} €</p>
+    <form action="{{ url_for('buy_ticket',id_conference=conference['id_conference']) }}" method="post" id="buyform">
+        <input type="button" value="-" class="minus">
+        <input type="number" step="1" min="1" max="20" name="quantity" id="quantity" value="1"
+            class="input-text qty text" size="4" pattern="" inputmode="">
+        <input type="button" value="+" name="plus" class="plus">
+        <button type="submit" form="buyform" id="shopping-button"><i class="fas fa-shopping-cart"></i></button>
+    </form>
+</div>
+<div>
+    <p>{{ capacity_msg }}</p>
+    <input type="button" value="Zaslať návrh prezentacie"
+        onclick="window.location.href='{{url_for('create_presentation',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Zobraziť časový rozpis"
+        onclick="window.location.href='{{url_for('show_timeshedule',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Zobraziť zoznam miestností"
+        onclick="window.location.href='{{url_for('show_rooms',id_conference=conference['id_conference'])}}';">
+</div>
+{% else %}
+<div class="quantity buttons_added">
+    <p>Cena vstupenky : {{conference['price']}} €</p>
+    <form action="{{ url_for('buy_ticket',id_conference=conference['id_conference']) }}" method="post" id="buyform">
+        <input type="button" value="-" class="minus">
+        <input type="number" step="1" min="1" max="20" name="quantity" id="quantity" value="1"
+            class="input-text qty text" size="4" pattern="" inputmode="">
+        <input type="button" value="+" name="plus" class="plus">
+        <button type="submit" form="buyform" id="shopping-button"><i class="fas fa-shopping-cart"></i></button>
+        <p>{{ capacity_msg }}</p>
+    </form>
+</div>
+<div>
+    <input type="button" value="Zobraziť časový rozpis"
+        onclick="window.location.href='{{url_for('show_timeshedule',id_conference=conference['id_conference'])}}';">
+    <input type="button" value="Zobraziť zoznam miestností"
+        onclick="window.location.href='{{url_for('show_rooms',id_conference=conference['id_conference'])}}';">
+</div>
+{% endif %}
+
+{% if 'logged_in' in session %}
+{% set lecturer =[] %}
+{%for presentation in presentations%}
+{% if presentation['lecturer'] == session['name'] + " " + session['surname'] %}
+{% do lecturer.append('1') %}
+{% endif %}
+{%endfor%}
+{% endif %}
+
+{% if lecturer %}
+<input type="button" value="Zobraziť rozpis mojich prezentácií"
+    onclick="window.location.href='{{url_for('show_my_presentation_timeshedule',id_conference=conference['id_conference'])}}';">
+{% endif %}
+
+<h1>Zoznam prezentácií</h1>
+{%for presentation in presentations%}
+<div style="cursor: pointer;"
+    onclick="window.location.href='{{ url_for('presentation', id_conference=conference['id_conference'], id_presentation=presentation['id_prezentation'])}}';">
+    <h1>{{presentation['name']}}</h1>
+    <p><b>Informácie: </b> {{presentation['info']}}</p>
+    <p><b>Prednášajúci: </b> {{presentation['lecturer']}}</p>
+    <p><b>Tagy: </b>{{presentation['tags']}}</p>
+
+</div>
+
+{%endfor%}
+
+{% endif %}
+
+{% endblock %}

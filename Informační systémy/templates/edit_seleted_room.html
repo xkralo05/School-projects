@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}EditSelectedRoom{% endblock %}
+
+{% block content %}
+
+<h2>Miestnosť: {{room}}</h2>
+<div>
+    <form action="{{ url_for('edit_selected_room',id_conference = id_conference,room=room)}}" method="post" autocomplete="off">
+        <table>
+            <tr>
+                <td><label for="new_name">Meno</label></td>
+                <td><input type="text" name="new_name" value={{room}} id="new_name" required><br>
+            </tr>
+            <tr>
+                <td><label for="new_capacity">Kapacita</label></td>
+                <td><input type="number" name="new_capacity" placeholder="200" min="1" id="new_capacity" required><br>                   
+            </tr>
+        </table>
+        <input type="submit" value="Zmeniť údaje">
+    </form>
+    <input type="submit" onclick="window.location.href='{{ url_for('delete_selected_room',id_conference = id_conference,room=room)}}';" value="Zmazať miestnosť"> 
+    <div class="msg">{{ msg }}</div>
+
+</div>
+
+{% endblock %}

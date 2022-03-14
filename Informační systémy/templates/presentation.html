@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% if edit == 'True' %}
+<h2>{{presentation['name']}}</h2>
+<div>
+    <form
+        action="{{ url_for('edit_presentation',edit='False',id_presentation=presentation['id_prezentation'],id_conference=conference['id_conference']) }}"
+        method="post" autocomplete="off">
+        <p>Podrobnosti prezentácie :</p>
+        <table>
+            <tr>
+                <td><label for="namel">Názov prezentácie</label></td>
+                <td><input type="text" name="name" value={{presentation['name']}} id="name" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="info">Bližšie informácie</label></td>
+                <td><input type="text" name="info" value={{presentation['info']}} id="info" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="lecturer">Prednášajúci</label></td>
+                <td><input type="text" name="lecturer" value={{presentation['lecturer']}} id="lecturer" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="tags">Tagy</label></td>
+                <td><input type="text" name="tags" value={{presentation['tags']}} id="tags"><br></td>
+            </tr>
+
+            <div class="msg">{{ msg }}</div>
+        </table>
+        <input type="submit" value="Zmeniť prezentáciu">
+    </form>
+</div>
+
+{% else %}
+<h1>{{ presentation['name'] }}!</h1>
+<div>
+    <p>{{presentation['info']}}</p>
+    <p>{{presentation['lecturer']}}</p>
+    <p>{{presentation['date_of_start']}}</p>
+    <p>{{presentation['date_of_end']}}</p>
+    <p>Tagy : {{presentation['tags']}}</p>
+</div>
+
+<input type="button" value="Späť na konferenciu"
+    onclick="window.location.href='{{ url_for('conference', id_conference=conference['id_conference'] )}}';">
+{% if presentation['user_fk'] == session['id'] or conference['user_fk'] == session['id'] %}
+<input type="button" value="Spravovať prezentáciu"
+    onclick="window.location.href='{{url_for('edit_presentation',id_conference=conference['id_conference'],id_presentation=presentation['id_prezentation'], edit='True')}}';">
+{% endif %}
+
+
+{% endif %}
+
+{% endblock %}

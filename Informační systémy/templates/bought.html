@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% if names %}
+<input type="button" value="Späť na konferenciu"
+    onclick="window.location.href='{{url_for('conference',id_conference=id_conference, edit='False')}}';">
+<p>Vstupenky boli zakúpené pre nasledujúce osoby :</p>
+{%for i in range(0, len, 2)%}
+<div>
+    <h1>{{(i // 2)+1}}. osoba</h1>
+    <table>
+        <tr>
+            <td>
+                Meno :
+            </td>
+            <td>
+                {{names[i]}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                Priezvisko :
+            </td>
+            <td>
+                {{names[i+1]}}
+            </td>
+        </tr>
+    </table>
+</div>
+
+{% endfor %}
+{% else %}
+<form action="{{ url_for('buy_ticket',id_conference=id_conference) }}" method="post" autocomplete="off">
+    <div>
+        <table>
+            {% for ticket in form.tickets %}
+
+            <tr>
+                <td>
+                    {{ticket.form.name.label}}
+                </td>
+                <td>
+                    {{ticket.form.name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ticket.form.surname.label}}
+                </td>
+                <td>
+                    {{ticket.form.surname}}
+                </td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+    {{form.submit}}
+</form>
+{% endif %}
+
+
+{% endblock %}

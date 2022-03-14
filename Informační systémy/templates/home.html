@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Zoznam konferencií</h2>
+{% if username == 'none' %}
+<p>Vitaj na stránke !</p>
+{% else %}
+<p>Vitaj späť, {{ username }}!</p>
+<input type="submit" onclick="window.location.href='{{ url_for('create_conference')}}';"
+    value=" Vytvoriť novú konferenciu">
+{% endif %}
+
+
+{%for conference in conferences%}
+{% if conference['user_fk'] == session['id'] %}
+<div style="cursor: pointer;"
+    onclick="window.location.href='{{ url_for('conference', id_conference=conference['id_conference'])}}';">
+    <h1>{{conference['name']}} - Moja konferencia</h1>
+    <p>Miesto konania : {{conference['place']}}</p>
+    <p>Cena : {{conference['price']}} €</p>
+    <p>Kapacita : {{conference['capacity']}}</p>
+</div>
+{% else %}
+<div style="cursor: pointer;"
+    onclick="window.location.href='{{ url_for('conference', id_conference=conference['id_conference'])}}';">
+    <h1>{{conference['name']}}</h1>
+    <p>Miesto konania : {{conference['place']}}</p>
+    <p>Cena : {{conference['price']}} €</p>
+    <p>Kapacita : {{conference['capacity']}}</p>
+</div>
+{% endif %}
+
+{%endfor%}
+
+{% endblock %}

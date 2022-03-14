@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<h1>Zoznam miestností</h1>
+{%for room in conf_rooms%}
+
+<div style="cursor: pointer;"
+    onclick="window.location.href='{{ url_for('room', id_conference=id_conference,room_name = room['name'])}}';">
+    <h1>Informacie o miestnosti</h1>
+    <p><b>Názov: </b> {{room['name']}}</p>
+    <p><b>Kapacita: </b> {{room['capacity']}}</p>
+</div>
+{%endfor%}
+{% endblock %}

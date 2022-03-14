@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block title %}CreateConference{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('create_conference') }}" method="post" autocomplete="off">
+    <table>
+        <tr>
+            <td><label for="name">Názov konferencie</label></td>
+            <td><input type="text" name="name" placeholder="Názov konferencie" id="name" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="field_of_interest">Oblasť záujmu</label></td>
+            <td><input type="text" name="field_of_interest" placeholder="Oblasť záujmu" id="field_of_interest"
+                    required><br>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="place">Miesto konania</label></td>
+            <td><input type="text" name="place" placeholder="Miesto konania" id="place" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="price">Cena</label></td>
+            <td><input type="number" name="price" placeholder="Cena" id="price"><br></td>
+        </tr>
+        <tr>
+            <td><label for="date_of_start">Dátum začiatku</label></td>
+            <td><input type="datetime-local" id="date_of_start" name="date_of_start" value="2021-11-18T00:00"
+                    min="2021-11-18T00:00" max="2050-11-19T00:00" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="date_of_end">Dátum konca</label></td>
+            <td><input type="datetime-local" id="date_of_end" name="date_of_end" value="2021-11-18T00:00"
+                    min="2021-11-18T00:00" max="2050-11-19T00:00" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="capacity">Kapacita</label></td>
+            <td><input type="number" min="1" name="capacity" placeholder="Kapacita" id="capacity"><br></td>
+        </tr>
+    </table>
+    <div class="msg">{{ msg }}</div>
+    <input type="submit" value="Vytvoriť novú konferenciu">
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+<input type="button" value="Späť na konferenciu"
+	onclick="window.location.href='{{ url_for('conference', id_conference=id_conference )}}';">
+{% if msg %}
+<h2>{{msg}}</h2>
+{% else %}
+{% for room in conf_rooms%}
+<br>
+<table>
+	<tr>
+		<td>Miestnosť :</td>
+		<td><b>{{room['name']}}</b></td>
+		<td>&nbsp &nbsp &nbsp &nbsp OD</td>
+		<td>&nbsp &nbsp &nbsp &nbsp DO</td>
+	</tr>
+	{% for presentation in presentations%}
+	{% if presentation['room_fk'] == room['id_room'] %}
+	<tr>
+		<td>&nbsp &nbsp &nbsp &nbsp Prezentácia:</td>
+		<td><b>{{presentation['name']}}</b></td>
+		<td>&nbsp &nbsp &nbsp &nbsp{{presentation['date_of_start']}}</td>
+		<td>&nbsp &nbsp &nbsp &nbsp{{presentation['date_of_end']}}</td>
+	</tr>
+	{% endif %}
+	{%endfor%}
+</table>
+{%endfor%}
+{% endif %}
+{% endblock %}

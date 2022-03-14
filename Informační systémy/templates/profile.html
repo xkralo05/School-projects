@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+{% if edit == 'True' %}
+<h2>Môj profil</h2>
+<div>
+    <form action="{{ url_for('edit_profile',edit='False') }}" method="post" autocomplete="off">
+        <p>Tvoje údaje :</p>
+        <table>
+            <tr>
+                <td><label for="username">Uživateľské meno</label></td>
+                <td><input type="text" name="username" value={{account['username']}} id="username" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="password">Heslo</label></td>
+                <td><input type="password" name="password" value={{account['password']}} id="password" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" value={{account['email']}} id="email" required><br></td>
+            </tr>
+            <div class="msg">{{ msg }}</div>
+        </table>
+        <input type="submit" value="Zmeniť údaje">
+    </form>
+</div>
+
+{% else %}
+<h2>Môj profil</h2>
+<div>
+    <p>Tvoje údaje :</p>
+    <table>
+        <tr>
+            <td>Uživateľské meno:</td>
+            <td>{{ account['username'] }}</td>
+
+        </tr>
+        <tr>
+            <td>Heslo:</td>
+            <td>{{ account['password'] }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ account['email'] }}</td>
+        </tr>
+        <tr>
+            <td>Meno:</td>
+            <td>{{ account['name'] }}</td>
+        </tr>
+        <tr>
+            <td>Priezvisko:</td>
+            <td>{{ account['surname'] }}</td>
+        </tr>
+    </table>
+    <input type="submit" onclick="window.location.href='{{url_for('edit_profile',edit='True')}}';" value="Upraviť údaje">
+</div>
+{% endif %}
+{% endblock %}
