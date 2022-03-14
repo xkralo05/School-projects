@@ -1,0 +1,60 @@
+<prog> ->	package main <fnc list> <main fnc> <fnc list> EOF
+<fnc list> -> 	<fnc> <fnc list>
+<fnc list> ->	eps
+
+<fnc> -> 	func f_id ( <parameters> <return types> { <stat list>
+
+<parameters> -> 	id <type> <param_n>
+<parameters> ->     )
+<param_n> ->    , <parameters> 
+<param_n> ->    )
+<return types> -> 	(<retList>
+<return types> ->   eps
+<retList> ->   )
+<retList> ->    <retType>
+<retType> -> 	<type> <retType_n>
+<retType_n> -> 	, <retType>
+<retType_n> -> 	)
+
+<stat>   ->     <return>
+<return> -> 	return <expr> <expressions>
+
+<main fnc> -> 	func main () { <stat list>	
+<stat list> -> 	<stat> <stat list>
+
+<stat> -> {<statlist>
+<stat> ->   id <FigAD>
+<stat> ->   _ <FigAD>
+
+<FigAD> ->  , <next_id>
+<FigAD> ->  := <expr> <expressions>
+<FigAD> ->  = <expr> <expressions>
+<FigAD> ->  (<expr>, <expressions)
+
+<expressions> ->    , <expr> <expressions>
+<expressions> ->    eps (EOL)
+
+<next_id> ->    id <FigAD>
+<next_id> ->    _ <FigAD>
+
+<type> -> 	float64
+<type> -> 	int
+<type> -> 	string	
+
+<stat> ->   <fnc>
+<stat> ->   <return>
+
+<stat> -> 	<if>
+<if> -> 	if <expr> { EOL <stat list> <else>
+
+<else> -> 	else { <statlist>
+<else> ->	EOL
+
+<stat> -> 	<for>
+<for> ->	for <for_decl> { EOL <stat list>
+<for_decl> ->	<decl> ; <expr> ; <assign i>
+<for_decl> ->	;<expr>; <assign i>
+<for_decl> ->   ;<expr>;
+
+<decl>  -> <FigAD>
+<assign_i> ->   <FigAD>
