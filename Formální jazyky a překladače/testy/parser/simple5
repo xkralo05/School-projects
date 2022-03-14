@@ -1,0 +1,29 @@
+/* hi */
+// error code 0
+
+package main
+
+func new() {
+    if 1 + 2 == 3 {
+        a := 5 /* hi
+        
+        
+         */
+    } else {
+        a := 10 //hhe
+    }//huuu
+    
+    return 6
+    for ; a >= 2 ; {
+        a := 19
+    } 
+}
+
+func hello ( a int, b float64 ) () {
+    return "ahoj"
+}
+/* hi */
+func main() {
+    _, a := pls( 2, 6+6 )
+    a = b
+}

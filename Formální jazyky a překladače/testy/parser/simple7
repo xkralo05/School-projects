@@ -1,0 +1,19 @@
+// chybajuci main, chyba 3
+
+package main
+
+func new() {
+    if 1 + 2 == 3 {
+        a := 5
+    } else {
+        a := 10
+    }
+    return 6
+    for ; a >= 2 ; {
+        a := 19
+    }
+}
+
+func hell ( a int, b float64 ) {
+    return "ahoj"
+}

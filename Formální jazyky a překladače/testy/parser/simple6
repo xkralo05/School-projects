@@ -1,0 +1,27 @@
+package main
+// error code 3
+
+func new() {
+    if 1 + 2 == 3 {
+        a := 5
+    } else {
+        a := 10
+    }
+    return 6
+    for ; a >= 2 ; {
+        a := 19
+    }
+}
+
+func hell ( a int, b float64 ) {
+    return "ahoj"
+}
+
+func main() {
+    a := 1
+    a := b
+}
+
+
+// TODO a, b, c = fks
+
