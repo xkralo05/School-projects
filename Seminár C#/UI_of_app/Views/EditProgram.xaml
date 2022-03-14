@@ -1,0 +1,67 @@
+﻿<local:UserControlBase
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UI_of_app.Views" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="UI_of_app.Views.EditProgram"
+                       mc:Ignorable="d" 
+             d:DesignHeight="365" d:DesignWidth="300"
+             DataContext="{Binding TimeSlotDetailViewModel, Source={StaticResource ViewModelLocator}}">
+    
+    <Grid Visibility="{Binding Model, Converter={StaticResource NullToVisibilityConverter}}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="{Binding ImageSource}" HorizontalAlignment="Left" Height="auto" Margin="45,20,0,50" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Band" Margin="30,302,20,20" Foreground="White"/>
+        <ComboBox Width="100" Margin="32,330,0,15" ItemsSource="{Binding Interprets}" SelectedValue="{Binding Model.Interpret}"  Height="20" HorizontalAlignment="Left">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding LoadImageCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Stage" Margin="150,302,20,0" Foreground="White"/>
+        <Grid Margin="32,207,48,31">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Start" Foreground="White"/>
+            <xctk:DateTimePicker Grid.Row="1" Value="{Binding Model.SlotStart}" Name="SlotStart" Width="220" />
+            <Label Content="End" Grid.Row="2" Foreground="White"/>
+            <xctk:DateTimePicker Grid.Row="3" Value="{Binding Model.SlotEnd}" Name="SlotEnd" Width="220" />
+        </Grid>
+
+        <ComboBox Width="100" Margin="152,330,0,15" ItemsSource="{Binding Stages}" SelectedValue="{Binding Model.Stage}" Height="20" HorizontalAlignment="Left">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Button x:Name="SaveProgram" BorderThickness="3" Content="Save" Background="{x:Null}"
+                
+                FontSize="12" FontStretch="Normal" Foreground="White" FontFamily="Segoe UI Light" Margin="0,180,75,0" 
+                Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50"
+                Command="{Binding SaveCommand}"/>
+        <Button x:Name="Delete" BorderThickness="3" Content="Delete" Background="{x:Null}"
+      
+                FontSize="12" FontStretch="Normal" Foreground="White" FontFamily="Segoe UI Light" Margin="0,180,200,0" 
+                Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50"
+                Command="{Binding DeleteCommand}"/>
+
+
+
+    </Grid>
+</local:UserControlBase>

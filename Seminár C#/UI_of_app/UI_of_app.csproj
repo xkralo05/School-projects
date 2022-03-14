@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>UI_of_app.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Items\**" />
+    <EmbeddedResource Remove="Views\Items\**" />
+    <None Remove="Views\Items\**" />
+    <Page Remove="Views\Items\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="bgr-photo.jpg" />
+    <None Remove="bgr-photo_blur1.jpg" />
+    <None Remove="Screenshot_20.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\bgr-photo.jpg" />
+    <Resource Include="Views\bgr-photo_blur1.jpg" />
+    <Resource Include="Views\Screenshot_20.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MainWindow - Copy.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Wrappers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.0.2" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.3.3" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ICSproject.BL\ICSproject.BL.csproj" />
+		<ProjectReference Include="..\ICSproject.DAL\ICSproject.DAL.csproj" />
+	</ItemGroup>
+
+</Project>

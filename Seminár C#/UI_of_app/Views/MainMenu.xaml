@@ -1,0 +1,22 @@
+﻿<local:UserControlBase x:Class="UI_of_app.Views.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_of_app.Views"
+        mc:Ignorable="d" Height="551" MinHeight="551" MaxHeight="826" MinWidth="801" MaxWidth="1201" Width="801" Background="#FF403538"
+       >
+    <Grid>
+        <Image Source="bgr-photo_blur1.jpg" Margin="-6,0,-6,-1" Grid.ColumnSpan="2"/>
+        <Label x:Name="_FestivalName_" Content="FestivalName" Background="{x:Null}" Foreground="White" FontSize="60" Height="84" VerticalAlignment="Top"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="485" RenderTransformOrigin="0.5,0.5" FontFamily="Harrington" FontWeight="Bold" Margin="-2,441,0,0">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="10" />
+            </Label.Effect>
+        </Label>
+
+        <Button x:Name="Program" BorderThickness="0"  Content="Program" Background="{x:Null}" FontSize="48" FontStretch="Normal" Foreground="White" FontFamily="Segoe UI Light" Margin="0,12,31,0" Height="70" VerticalAlignment="Top" HorizontalAlignment="Right" Width="187" Command="{Binding GoToProgramCommand}"/>
+        <Button x:Name="Stages" BorderThickness="0"  Content="Stages" Height="72" Width="151" Background="{x:Null}" FontSize="48" FontStretch="Normal" Foreground="White" FontFamily="Segoe UI Light" Margin="0,10,223,0" HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding GoToStagesCommand}"/>
+        <Button x:Name="Bands" BorderThickness="0"  Content="Bands" Background="{x:Null}" FontSize="48" FontStretch="Normal" Foreground="White" FontFamily="Segoe UI Light" FontStyle="Normal" Height="72" Margin="0,10,379,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="151" Command="{Binding GoToBandsCommand}" />
+
+    </Grid>
+</local:UserControlBase>
